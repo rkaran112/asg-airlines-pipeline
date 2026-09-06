@@ -1,0 +1,2 @@
+total_flights,total_bookings,total_passengers,airlines_operating,routes_operated,avg_flight_duration_minutes,median_flight_duration_minutes,overnight_flights,overnight_flight_pct,anomaly_flights,anomaly_pct,confirmed_bookings,cancellation_rate_pct,total_revenue,avg_payment_amount
+1004,1000,636,4,30,164.8,166.5,122,12.2,2,0.2,320,33.9,7385142.98,8009.92

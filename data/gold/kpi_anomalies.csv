@@ -1,0 +1,3 @@
+flight_id,airline,route,departure_time,arrival_time,duration_minutes,route_median_duration_minutes,duration_vs_route_median_minutes,is_overnight,anomaly_reason
+SJ192,SpiceJet,HYD - BOM,2026-04-19 18:45:42.000,2026-04-19 23:45:42.000,300,150.0,150,False,Arrival date repaired (cross-day)
+6F250,IndiGo,DEL - BLR,2026-04-20 03:26:41.701,2026-04-20 07:30:41.701,244,191.0,53,False,Conflicting duplicate flight_id

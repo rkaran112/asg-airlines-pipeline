@@ -1,0 +1,5 @@
+airline,flights_operated,avg_duration_minutes,median_duration_minutes,min_duration_minutes,max_duration_minutes,overnight_flights,anomalies,share_of_flights_pct
+IndiGo,272,165.4,169.0,30,300,32,1,27.1
+Air India,255,165.4,164.0,35,299,33,0,25.4
+SpiceJet,247,163.8,166.0,32,300,29,1,24.6
+Vistara,230,164.3,166.0,30,300,28,0,22.9
