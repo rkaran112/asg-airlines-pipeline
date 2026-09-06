@@ -318,8 +318,31 @@ does not re-infer types.
 
 ## Power BI dashboard
 
-`powerbi/` holds the `.pbix` and screenshots. It loads `data/gold/*.csv` — four
-pages, KPI cards, slicers on airline / route / date / time band.
+`powerbi/asg_airlines_dashboard.pbix` — four pages, with one screenshot per page in
+`powerbi/screenshots/`. Slicers on airline, route and booking month apply across all
+pages.
 
-See `docs/powerbi_build_guide.md` for the page-by-page build, the exact source table
-behind every visual, and the DAX measures.
+| Page | Headline |
+|---|---|
+| Executive Overview | 1,003 flights · 164.67 min avg duration · 1,000 bookings · ₹7.39M valid revenue · 31.4% cancellation rate · 63.7% payment coverage |
+| Duration & Schedule | 12.2% cross midnight · 27.0% red-eye · per-route duration profile · flight-level table showing every corrected record |
+| Route & Airline Performance | 30 routes, led by BOM–CCU at 90 flights · near-even four-way airline share |
+| Data Quality, Pipeline Audit & Governance | All 714 source issue events by table, issue and treatment · the delay disclaimer |
+
+See [docs/dashboard_walkthrough.md](docs/dashboard_walkthrough.md) for the measure
+behind every visual and the full issue register.
+
+### Dashboard vs pipeline: 1,003 vs 1,004 flights
+
+The dashboard model and the pipeline in `src/` differ on exactly one record:
+
+| | Pipeline (`src/`) | Dashboard model |
+|---|---|---|
+| Conflicting `flight_id` 6F250 | first kept and flagged, second quarantined | both quarantined |
+| Flight count | 1,004 | 1,003 |
+| Average duration | 164.8 min | 164.67 min |
+| 72 missing/sentinel airlines | repaired from the `flight_id` prefix | retained as `UNKNOWN` |
+
+Every other data quality count agrees exactly — 15 exact duplicate flights, 41 + 31
+airlines, 48 + 30 payment amounts, 45 + 30 booking statuses, 75 duplicate passenger
+ids, 10 missing surnames. Both read the same defects from the same source.
