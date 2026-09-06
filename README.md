@@ -343,6 +343,6 @@ The dashboard model and the pipeline in `src/` differ on exactly one record:
 | Average duration | 164.8 min | 164.67 min |
 | 72 missing/sentinel airlines | repaired from the `flight_id` prefix | retained as `UNKNOWN` |
 
-Every other data quality count agrees exactly — 15 exact duplicate flights, 41 + 31
+Every other data quality count agrees exactly 15 exact duplicate flights, 41 + 31
 airlines, 48 + 30 payment amounts, 45 + 30 booking statuses, 75 duplicate passenger
 ids, 10 missing surnames. Both read the same defects from the same source.
