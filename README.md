@@ -1,4 +1,4 @@
-# ASG Airlines — End-to-End Data Engineering Pipeline
+# ASG Airlines: End-to-End Data Engineering Pipeline
 
 Ingests ASG Airlines' operational flight data from a multi-sheet Excel export,
 repairs the data quality defects in it, protects passenger PII, models the result as
