@@ -1,0 +1,16 @@
+# Bronze holds a verbatim copy of the source, including raw passenger PII.
+# It is a generated artifact - rerun the pipeline to recreate it.
+data/bronze/
+
+# Silver is PII-safe but intermediate; gold is the published deliverable.
+data/silver/
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
